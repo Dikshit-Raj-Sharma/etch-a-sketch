@@ -21,17 +21,17 @@ function generateGrid(num) {
 
 
 
-const resizeBtn = document.querySelector("#resizeBtn");
+const gridSizeBtn = document.querySelector("#gridSizeBtn");
+const gridInput = document.querySelector("#gridInput");
 const eraseBtn =document.querySelector("#eraser");
 const clearBtn=document.querySelector("#clearBtn");
 
-resizeBtn.addEventListener('click', () => {
-    let userInput = prompt("Enter Grid Size (max 100) : ");
-    let userInputToInt = parseInt(userInput)
+gridSizeBtn.addEventListener('click', () => {
+    const size=parseInt(gridInput.value);
 
-    if (userInputToInt > 0 && userInputToInt <= 100) {
-        currentGridSize=userInputToInt;
-        generateGrid(userInputToInt);
+    if (size > 0 && size <= 100) {
+        currentGridSize=size;   
+        generateGrid(size);
     } else {
         alert("Invalid input. Using default 16x16 grid.");
         generateGrid(16);
