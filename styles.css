@@ -25,3 +25,9 @@
 .square:hover{
     background-color: grey;
 }
+.feature{
+    display:flex;
+    margin-top:30px;
+    gap:40px;
+
+}
